@@ -1,0 +1,9 @@
+ipykernel 
+pandas 
+numpy
+matplotlib
+scikit-learn
+flask
+Flask-Cors
+scipy
+gunicorn
