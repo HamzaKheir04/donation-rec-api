@@ -48,14 +48,19 @@ Hybrid Score = (0.6 × SVD cosine similarity) + (0.4 × Category preference scor
 **Sparse matrix:** the User-Item matrix (19,906 × 82,023) is built using `scipy.sparse.csr_matrix`, with a density of only 0.04% — storing the matrix densely would require ~13GB of RAM versus ~7MB with the sparse representation.
  
 ## Evaluation
- 
+
 - **Split strategy:** Time-based (train = interactions before Dec 1, 2017; test = interactions after) — chosen over a random split to simulate realistic future-prediction conditions rather than allowing information leakage from later interactions into training.
-- **Metric level:** Category-level rather than product-level, since with 82,023 unique products, exact product-level matches are statistically near-impossible to achieve meaningfully.
+
+| Setting | Detail |
+|---|---|
+| Metric level | Category-level rather than product-level — with 82,023 unique products, exact product-level matches are statistically near-impossible to achieve meaningfully |
+
 | K | Precision@K | Recall@K | F1@K |
 |---|---|---|---|
 | 5 | 12.78% | 47.55% | 0.2015 |
 | 10 | 7.48% | 55.75% | 0.1319 |
 | 20 | 4.17% | 61.97% | 0.0782 |
+
  
 ### Baseline comparison
  
