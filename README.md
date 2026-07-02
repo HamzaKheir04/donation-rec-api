@@ -33,7 +33,7 @@ Instead of sampling random rows, the pipeline filters for **active users with 15
 ## Model
  
 **Architecture:** Hybrid Recommendation System
- 
+ ![Architecture](architecture.png)
 | Component | Weight | Method |
 |---|---|---|
 | Collaborative Filtering | 60% | `TruncatedSVD` (scikit-learn), `n_components=500` |
